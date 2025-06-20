@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet-Number Chart</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for better aesthetics */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-6 sm:p-8 md:p-10 rounded-lg shadow-xl max-w-4xl w-full text-center">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Alphabet-Number Mapping Chart</h1>
+
+        <!-- Container for the chart rows -->
+        <div class="flex flex-col gap-y-6">
+            <!-- Row 1: A-I -->
+            <div class="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 gap-y-2">
+                <!-- Each alphabet-number pair is a flex item -->
+                <!-- Increased padding and fixed width/height for square boxes, with responsive adjustments -->
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">A</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">0</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">B</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">1</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">C</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">2</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">D</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">3</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">E</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">4</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">F</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">5</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">G</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">6</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">H</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">7</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">I</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">8</span>
+                </div>
+            </div>
+
+            <!-- Row 2: J-R -->
+            <div class="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 gap-y-2">
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">J</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">9</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">K</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">10</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">L</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">11</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">M</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">12</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">N</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">13</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">O</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">14</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">P</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">15</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">Q</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">16</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">R</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">17</span>
+                </div>
+            </div>
+
+            <!-- Row 3: S-Z -->
+            <div class="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 gap-y-2">
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">S</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">18</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">T</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">19</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">U</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">20</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">V</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">21</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">W</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">22</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">X</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">23</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">Y</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">24</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors duration-200 shadow-md">
+                    <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700">Z</span>
+                    <span class="text-md sm:text-lg md:text-xl text-gray-600">25</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
