@@ -44,6 +44,40 @@
             </div>
         </div>
 
+         <!-- New section for Modulo Calculator -->
+        <div class="mb-10 pb-6 border-b border-gray-200 flex flex-col items-center gap-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Modulo Calculator</h2>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-sm md:max-w-md lg:max-w-lg">
+                <input
+                    type="number"
+                    id="numberInput"
+                    placeholder="Enter number"
+                    class="flex-grow p-3 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 text-center text-lg sm:text-xl"
+                />
+                <!-- Added 'flex-shrink-0' to MOD span to prevent it from shrinking on smaller screens -->
+                <span class="text-2xl font-bold text-gray-700 mx-2 flex-shrink-0">MOD</span>
+                <input
+                    type="number"
+                    id="moduloInput"
+                    placeholder="Enter divisor"
+                    class="flex-grow p-3 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 text-center text-lg sm:text-xl"
+                />
+                <button
+                    id="calculateModuloButton"
+                    class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-semibold rounded-md shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors duration-200"
+                >
+                    Calculate Modulo
+                </button>
+            </div>
+            <div
+                id="moduloResultDisplay"
+                class="mt-4 p-4 min-h-[60px] w-full max-w-sm md:max-w-md lg:max-w-lg bg-purple-100 border border-purple-200 rounded-md text-purple-800 text-lg sm:text-xl font-medium flex items-center justify-center break-words text-left"
+            >
+                <!-- Modulo result will be displayed here -->
+                Enter numbers above to calculate modulo.
+            </div>
+        </div>
+
         <!-- Original Alphabet-Number Mapping Chart section - MOVED TO BOTTOM -->
         <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Alphabet-Number Mapping Chart</h2>
         <div class="flex flex-col gap-y-6">
@@ -220,6 +254,57 @@
         alphabetInput.addEventListener('keypress', (event) => {
             if (event.key === 'Enter') {
                 convertButton.click();
+            }
+        });
+
+        // Modulo Calculator
+        const numberInput = document.getElementById('numberInput');
+        const moduloInput = document.getElementById('moduloInput');
+        const calculateModuloButton = document.getElementById('calculateModuloButton');
+        const moduloResultDisplay = document.getElementById('moduloResultDisplay');
+
+        calculateModuloButton.addEventListener('click', () => {
+            const num = parseFloat(numberInput.value.trim());
+            const divisor = parseFloat(moduloInput.value.trim());
+
+            // Validate inputs
+            if (isNaN(num) || numberInput.value.trim() === '') {
+                moduloResultDisplay.textContent = 'Please enter a valid number.';
+                moduloResultDisplay.classList.remove('bg-purple-100', 'text-purple-800', 'border-purple-200');
+                moduloResultDisplay.classList.add('bg-red-100', 'text-red-800', 'border-red-200');
+                return;
+            }
+
+            if (isNaN(divisor) || moduloInput.value.trim() === '') {
+                moduloResultDisplay.textContent = 'Please enter a valid divisor.';
+                moduloResultDisplay.classList.remove('bg-purple-100', 'text-purple-800', 'border-purple-200');
+                moduloResultDisplay.classList.add('bg-red-100', 'text-red-800', 'border-red-200');
+                return;
+            }
+
+            if (divisor === 0) {
+                moduloResultDisplay.textContent = 'Error: Division by zero is not allowed.';
+                moduloResultDisplay.classList.remove('bg-purple-100', 'text-purple-800', 'border-purple-200');
+                moduloResultDisplay.classList.add('bg-red-100', 'text-red-800', 'border-red-200');
+                return;
+            }
+
+            const result = num % divisor;
+            moduloResultDisplay.textContent = `${num} MOD ${divisor} = ${result}`;
+            moduloResultDisplay.classList.remove('bg-red-100', 'text-red-800', 'border-red-200');
+            moduloResultDisplay.classList.add('bg-purple-100', 'text-purple-800', 'border-purple-200');
+        });
+
+        // Allow pressing Enter key in either input field to trigger modulo calculation
+        numberInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                calculateModuloButton.click();
+            }
+        });
+
+        moduloInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                calculateModuloButton.click();
             }
         });
     </script>
